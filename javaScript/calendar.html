@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Year: <input type="text" id="year"><br><br>
+    Month: <input type="text" id="month"><br><br>
+    <input type="button" onclick="generateCalendar()" value="Generate">
+    <script>
+        function calculateDays(date1, date2) {
+            var dt1 = new Date(date1);
+            var dt2 = new Date(date2);
+            var mili1 = dt1.getTime();
+            var mili2 = dt2.getTime();
+            var diff = mili1 - mili2;
+            if (diff < 0) {
+                diff = diff * (-1);
+            }
+            diff = diff /1000/60/60/24; // milliseconds, minutes, hours, days, months
+            diff= parseInt(diff);
+            return diff;
+        }
+
+        function generateCalendar(){
+            var year=document.getElementById("year").value;
+            var month=document.getElementById("month").value;
+
+            var dt1=year+"/"+month+"/01";
+            var obj1=new Date(dt1);
+            var startingDay=obj1.getDay();
+
+            var nextMonth=parseInt(month)+1;
+            var nextYear=year;
+            if(nextMonth>12){
+                nextMonth=1;
+                nextYear=parseInt(year)+1;
+            }
+            var dt2=nextYear+"/"+nextMonth+"/01";
+            var totalDays=calculateDays(dt1,dt2);
+            document.write("<table border=1 cellspacing=0 width=50%><tr>");
+            if(startingDay!=0){
+                document.write("<td colspan="+startingDay+"></td>");
+                
+            }
+            for(var i=1;i<=totalDays;i++){
+                document.write("<td>"+i+"</td>");
+                startingDay++;
+                if(startingDay%7==0){
+                    document.write("</tr><tr>");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

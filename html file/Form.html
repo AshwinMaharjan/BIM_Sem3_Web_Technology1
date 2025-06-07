@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+</head>
+<body>
+    <form method="post" action="action.php">
+       
+       <fieldset>
+        <legend>Personal Information</legend>
+        <input type="text" placeholder="Name"><br><br>
+        <input type="text" placeholder="Last Name"><br><br>
+        <input type="email" placeholder="Email Address">
+        <br><br>
+        <input type="radio" name="g">Male
+        <input type="radio" name="g">Female
+    </fieldset>
+    <br>
+    <h3>What are your favorite subjects?</h3>
+    <input type="checkbox" value="math" name="subject" id="101"> Maths
+    <input type="checkbox" value="science" name="subject" id="102"> Science
+    <input type="checkbox" value="computer" name="subject" id="103"> Computer
+
+    <h3> Select your city </h3>
+    <select name="city" id="city">
+        <option value="Kathmandu"> Kathmandu </option>
+        <option value="Pokhara"> Pokhara </option>
+        <option value="Patan"> Patan </option>
+        <option value="Bhaktapur"> Bhaktapur </option>
+    </select>    
+        <br><br>
+    <h3> Write your feedback here</h3>
+    <textarea name="feedback" id="201" placeholder="Please give us your feedback here" rows="5">
+
+    </textarea>
+    <br><br>
+    <input type="submit" value="Submit Your Form">    
+</form>
+
+ 
+</body>
+</html>

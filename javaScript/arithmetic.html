@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    First Number: <input type="text" id="num1"><br><br>
+    Second Number: <input type="text" id="num2"><br><br>
+    <input type="button" onclick="display()" value="Perform">
+    <script>
+        function display(){
+            var n1=document.getElementById("num1").value;
+            var n2=document.getElementById("num2").value;
+            var sum=parseInt(n1)+parseInt(n2);
+            var diff=parseInt(n1)-parseInt(n2);
+            var mul=parseInt(n1)*parseInt(n2);
+            var div=parseInt(n1)/parseInt(n2);
+            document.write("Sum: "+sum);
+            document.write("<br>Difference: "+diff);
+            document.write("<br>Multiplication: "+mul);
+            document.write("<br>Division: "+div);
+        }
+        
+        
+    </script>
+</body>
+</html>

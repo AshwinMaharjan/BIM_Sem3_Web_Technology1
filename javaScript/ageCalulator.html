@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Date1: <input type="text" id="date1"><br>
+    Date2: <input type="text" id="date2"><br>
+    <input type="button" onclick="calculateDiff()" value="Perform">
+    <script>
+        function calculateDiff(){
+            var date1=document.getElementById("date1").value;
+            var date2=document.getElementById("date2").value;
+            var dt1=new Date(date1);
+            var dt2=new Date(date2);
+            var mili1=dt1.getTime();
+            var mili2=dt2.getTime();
+            var diff=mili1-mili2;
+            if(diff<0){
+                diff=diff*(-1);
+            }            
+            diff=diff/1000/60/60/24/30/12; //milli seconds minutes hours days months
+            diff=parseInt(diff);
+            alert(diff);
+        }
+    </script>
+</body>
+</html>

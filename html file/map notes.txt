@@ -1,0 +1,13 @@
+usemap attribute in <img>
+
+<map>
+inside the map tage we have
+	<area>
+	inside the area tag, we have three attributes
+	shape, coords, href
+	the value of shape attribute determines the value of coords
+	if shape = react then coords="x1,y1,x2,y2"
+	
+	if shape=circle then coords="x,y,r"
+
+	if shape=poly then coords="x1,y1,x2,y2.......xn,yn"

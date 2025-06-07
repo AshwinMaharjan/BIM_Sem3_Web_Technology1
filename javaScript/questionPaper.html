@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Name: <input type="text" id="name"><br><br>
+    Phone Number: <input type="number" id="num"><br><br>
+    Password: <input type="password" id="pass"><br><br>
+    Confirm Password: <input type="password" id="confirm"><br><br>
+    Email: <input type="email" id="em"><br><br>
+    Age: <input type="number" id="ag"><br><br>
+    <input type="button" onclick="validate()" value="Submit">
+
+    <script type="text/javascript">
+    function validate(){ 
+        var userName=document.getElementById("name").value;
+        var number=document.getElementById("num").value;
+        var password=document.getElementById("pass").value;
+        var confirmPassword=document.getElementById("confirm").value;
+        var email=document.getElementById("em").value;
+        var age=document.getElementById("ag").value;
+        
+        if(!userName.startsWith('N') && !userName.endsWith('L')){
+            alert("Name should be starts with N and ends with L");
+            return;
+        }
+
+        if(number.length>10){
+            alert("The number should not exceeds more than 10 characters");
+            return;
+        }
+        if(password.lenth>8){
+            alert("The password should be 8 characters long");
+            return;
+        }
+        if(password!==confirmPassword){
+            alert("Passwords should be same");
+            return;
+        }
+        if(age<16 || age>50){
+            alert("The age should be greater than 16 and less than 50");
+            return;
+        }
+        if(!email.includes("@")&&!email.includes(".")){
+            alert("Invalid email");
+        return;
+        }
+
+        alert("Form is submitted");
+}
+    </script>
+</body>
+</html>
