@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Numbers</title>
+</head>
+<body>
+    Enter number: <input type="text" id="number"><br><br>
+    <button type="button" onclick="DivisibleBy5()">Check</button>
+
+    <script>
+        function DivisibleBy5() {
+            // Get the user input as strings
+            var num = document.getElementById("number").value;
+
+            // Parse the input to integers
+            var number = parseInt(num);
+
+            if (number % 5 === 0) {
+                alert("The given number is divisible by 5")
+            }else{
+                alert("The given number is not divisible by 5")
+
+            }        
+        }
+    </script>
+</body>
+</html>

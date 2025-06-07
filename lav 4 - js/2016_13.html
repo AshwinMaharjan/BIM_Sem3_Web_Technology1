@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Difference Calculator</title>
+</head>
+<body>
+
+<script>
+    function calculateDateDifference() {
+        // Get user inputs
+        var startDateInput = document.getElementById('startDate').value;
+        var endDateInput = document.getElementById('endDate').value;
+
+        // Convert input strings to Date objects
+        var startDate = new Date(startDateInput);
+        var endDate = new Date(endDateInput);
+
+        // Check if the inputs are valid dates
+        if (isNaN(startDate) || isNaN(endDate)) {
+            alert("Invalid date format. Please enter dates in the format YYYY-MM-DD.");
+            return;
+        }
+
+        // Calculate the time difference in milliseconds
+        var timeDifference = endDate - startDate;
+
+        // Calculate the difference in days
+        var daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+        // Display the result
+        alert("Difference between two dates is " + daysDifference + " days");
+    }
+</script>
+    Start Date (YYYY-MM-DD): <input type="text" id="startDate" required> <br> <br>
+    End Date (YYYY-MM-DD): <input type="text" id="endDate" required> <br> <br>
+    <button type="button" onclick="calculateDateDifference()">Calculate Difference</button>
+
+</body>
+</html>

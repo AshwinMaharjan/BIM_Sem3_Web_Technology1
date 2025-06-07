@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested List with Internal CSS</title>
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        .main-list {
+            height: 300px;
+            width: 300px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-list > li {
+            background-color:pink;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+
+        .asia {
+            list-style-type: square;
+        }
+        .europe {
+            list-style-type: circle;
+        }
+        .africa {
+            list-style-type: lower-alpha;
+        }
+    </style>
+
+</head>
+<body>
+    <ul class="main-list">
+        <li><b>Asia Continent</b>
+            <ul class="asia">
+                <li>Nepal</li>
+                <li>India</li>
+                <li>China</li>
+            </ul>
+        </li>
+        <li><b>Europe Continent</b>
+            <ul class="europe">
+                <li>Spain</li>
+                <li>France</li>
+                <li>Portugal</li>
+            </ul>
+        </li>
+        <li><b>Africa Continent</b>
+            <ul class="africa">
+                <li>South Africa</li>
+                <li>Nigeria</li>
+                <li>Kenya</li>
+        </li>
+    </ul>
+</body>
+</html>

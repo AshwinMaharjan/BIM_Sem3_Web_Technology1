@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Comparison</title>
+</head>
+<body>
+
+<script>
+    function checkStringsEquality() {
+        var string1=document.getElementById("string1").value;
+        var string2=document.getElementById("string2").value;
+        // Check if the strings are equal
+        if (string1 === string2) {
+            // Check if the first string is in uppercase
+            if (string1 === string1.toUpperCase()) {
+                alert("The first string is in uppercase.");
+            } else {
+                alert("The two strings match, but the first string is not in uppercase.");
+            }
+        } else {
+            alert("The two strings do not match.");
+        }
+    }
+</script>
+First String: <input type="text" id="string1" required><br><br>
+Second String: <input type="text" id="string2" required><br><br>
+
+<button type="button" onclick="checkStringsEquality()">Compare Strings</button>
+
+</body>
+</html>

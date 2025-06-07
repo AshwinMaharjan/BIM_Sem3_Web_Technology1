@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Numbers</title>
+</head>
+<body>
+    Enter first number: <input type="text" id="firstNumber"><br><br>
+    Enter second number: <input type="text" id="secondNumber"><br><br>
+    <button type="button" onclick="sumDivisibleBy5And9()">Calculate Sum</button>
+
+    <script>
+        function sumDivisibleBy5And9() {
+            // Get the user input as strings
+            var firstNumStr = document.getElementById("firstNumber").value;
+            var secondNumStr = document.getElementById("secondNumber").value;
+
+            // Parse the input to integers
+            var firstNum = parseInt(firstNumStr);
+            var secondNum = parseInt(secondNumStr);
+
+            // Validate input
+            if (isNaN(firstNum) || isNaN(secondNum)) {
+                alert("Invalid input. Please enter valid integers.");
+                return;
+            }
+
+            // Initialize the sum
+            var sum = 0;
+
+            // Sum the numbers if they are divisible by both 5 and 9
+            if (firstNum % 5 === 0 && firstNum % 9 === 0) {
+                sum += firstNum;
+            }
+
+            if (secondNum % 5 === 0 && secondNum % 9 === 0) {
+                sum += secondNum;
+            }
+
+            // Display the result
+            alert("Sum of numbers divisible by both 5 and 9: " + sum);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.container {
+    height: 200px;
+    width: 400px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+    padding: 20px;
+}
+
+.item {
+    background-color: lightgrey;
+    padding: 20px;
+    text-align: center;
+}
+
+.item a {
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+}

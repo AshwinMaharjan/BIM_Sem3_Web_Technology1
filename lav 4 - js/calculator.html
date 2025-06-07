@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    Enter first number: <input type="text" id="firstNumber"><br><br>
+    Enter second number: <input type="text" id="secondNumber"><br><br>
+    Select operation:
+    <select id="operation">
+        <option value="add">Addition (+)</option>
+        <option value="subtract">Subtraction (-)</option>
+        <option value="multiply">Multiplication (*)</option>
+        <option value="divide">Division (/)</option>
+    </select><br><br>
+    <button type="button" onclick="calculate()">Calculate</button>
+
+    <script>
+        function calculate() {
+            // Get the user input as strings
+            var firstNumStr = document.getElementById("firstNumber").value;
+            var secondNumStr = document.getElementById("secondNumber").value;
+            var operation = document.getElementById("operation").value;
+
+            // Parse the input to numbers
+            var firstNum = parseFloat(firstNumStr);
+            var secondNum = parseFloat(secondNumStr);
+
+            // Validate input
+            if (isNaN(firstNum) || isNaN(secondNum)) {
+                alert("Invalid input. Please enter valid numbers.");
+                return;
+            }
+
+            // Perform the selected operation
+            var result;
+            switch (operation) {
+                case "add":
+                    result = firstNum + secondNum;
+                    break;
+                case "subtract":
+                    result = firstNum - secondNum;
+                    break;
+                case "multiply":
+                    result = firstNum * secondNum;
+                    break;
+                case "divide":
+                    if (secondNum !== 0) {
+                        result = firstNum / secondNum;
+                    } else {
+                        alert("Cannot divide by zero. Please enter a non-zero second number.");
+                        return;
+                    }
+                    break;
+                default:
+                    alert("Invalid operation. Please select a valid operation.");
+                    return;
+            }
+
+            // Display the result
+            alert("Result: " + result);
+        }
+    </script>
+</body>
+</html>

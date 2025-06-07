@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Prime Numbers</title>
+</head>
+<body>
+<!-- Script section for JavaScript code -->
+<script>
+    function isPrime(number) {
+        if (number < 2) return false;
+        for (let i = 2; i <= number/2; i++) {
+            if (number % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function getPrimeInput(id) {
+        let input = document.getElementById(id).value;
+        input = parseInt(input);
+        if (isNaN(input)) {
+            alert("Please enter a valid number.");
+            return null;
+        } else if (!isPrime(input)) {
+            alert("Please enter a prime number.");
+            return null;
+        }
+        return input;
+    }
+
+    function addPrimeNumbers() {
+        // Get user inputs for prime numbers
+        var prime1 = getPrimeInput("prime1");
+        var prime2 = getPrimeInput("prime2");
+
+        // Check if both inputs are valid
+        if (prime1 !== null && prime2 !== null) {
+            // Add the prime numbers
+            var sum = prime1 + prime2;
+
+            // Display the result
+            alert("The sum of the two prime numbers is: " + sum);
+        }
+    }
+</script>
+<!-- HTML elements for user input -->
+First Number: <input type="text" id="prime1"><br><br>
+Second Number: <input type="text" id="prime2"><br><br>
+
+<!-- Button to trigger the calculation -->
+<button type="button" onclick="addPrimeNumbers()">Add Prime Numbers</button>
+</body>
+</html>

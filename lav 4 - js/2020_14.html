@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let data = [" Apple"," Orange"," Mango"];
+        document.write("Adding 3 items in the front: <br>");
+        // data.unshift(" Grapes"," Banana"," Papaya");
+        data.splice(0,3," Grapes"," Banana"," Papaya");
+        document.write(data);
+        document.write("<br><br>")
+        data.pop();
+        data.pop();
+        document.write("Removing 2 items from the back:<br>");
+        document.write(data);
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Integer</title>
+</head>
+<body>
+    Enter an integer: <input type="number" id="userInput"><br><br>
+    <button type="button" onclick="reverseInteger()">Reverse</button>
+
+    <script>
+        function reverseInteger() {
+            // Get the user input
+            var userInput = document.getElementById("userInput").value;
+
+            // Check if the input is a valid integer
+            if (Number.isInteger(parseInt(userInput))) {
+                // Reverse the integer
+                var reversedInteger = parseInt(userInput.toString().split('').reverse().join(''));
+
+                // Display the reversed integer
+                alert("Reversed Integer: " + reversedInteger);
+            } else {
+                alert("Invalid input. Please enter a valid integer.");
+            }
+        }
+    </script>
+</body>
+</html>

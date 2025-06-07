@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image</title>
+</head>
+<style type="text/css">
+    .footballer{
+        display: inline-block;
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        color: white;
+        border: 2px solid black;
+    }
+    #ronaldo{
+        background-image: url("ronaldo.jpg");
+        background-size: cover;
+        padding: 10px 10px;            
+        background-position: center;
+    }
+    #messi{
+        background-image: url("messi.jpg");
+        background-size: cover;
+        padding: 10px 10px;
+        left: 250px;
+        background-position: center;
+    }
+
+
+
+</style>    
+<body>
+    <div class="footballer" id="ronaldo">Ronaldo</div>
+    <div class="footballer" id="messi">Messi</div>
+</body>
+</html>

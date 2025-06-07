@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Matching Check</title>
+</head>
+<body>
+    Password: <input type="password" id="password" required><br><br>
+    Retyped Password: <input type="password" id="retypePassword" required><br><br>
+    <button type="button" onclick="checkPasswords()">Check Passwords</button>
+
+
+<script>
+    function checkPasswords() {
+        // Get user inputs
+        var password = document.getElementById('password').value;
+        var retypePassword = document.getElementById('retypePassword').value;
+
+        // Check if passwords match
+        if (password === retypePassword) {
+            alert("Passwords match!");
+        } else {
+            alert("Passwords do not match");
+        }
+    }
+</script>
+
+</body>
+</html>

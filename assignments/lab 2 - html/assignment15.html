@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+</head>
+<body>
+
+    <h1>Job Application Form</h1>
+
+    <form action="#" method="post">
+        <!-- Name Input -->
+        <label for="name">Full Name:</label>
+        <input type="text" required>
+
+        <br><br>
+
+        <!-- Email Input -->
+        <label for="email">Email:</label>
+        <input type="email" required>  
+        
+        <br><br>
+        <!-- Contact Input -->
+        <label for="number">Contact:</label>
+        <input type="number" required>
+
+        <br><br>
+
+        <!-- Radio Buttons -->
+                <label>Gender:</label>
+                <input type="radio" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" value="female">
+                <label for="female">Female</label>
+                
+                
+        <br><br>
+
+        <!-- Position Dropdown -->
+        <label for="position">Applying for Position:</label>
+        <select name="position">
+            <option value="developer">Developer</option>
+            <option value="designer">Designer</option>
+            <option value="manager">Manager</option>
+        </select>
+
+        <br><br>
+        <!-- Cover Letter Textarea -->
+        <textarea name="cover-letter" rows="7" cols="30" placeholder="Write your cover letter here" required></textarea>
+
+        <br><br>
+
+        <!-- Salary Input -->
+        <label for="number">Expected Salary:</label>
+        <input type="number" name="number" required>
+
+        <br><br>
+
+        <!-- Resume Upload -->
+        <label for="resume">Upload Resume (PDF or Word):</label>
+        <input type="file" name="resume" accept=".pdf, .doc, .docx" required>
+
+        <br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit Your Application">
+    </form>
+
+</body>
+</html>

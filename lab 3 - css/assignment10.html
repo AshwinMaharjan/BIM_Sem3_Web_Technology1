@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: black;
+           
+        }
+        .container{
+            height: 700px;
+            width: 700px;
+            text-align: justify;
+
+        }
+        /* ::after pseudo-element */
+        p::after {
+            content: " - Added content with ::after";
+            color: blue;
+        }
+
+        /* ::first-letter pseudo-element */
+        p::first-letter {
+            font-size: 24px;
+            color: red;
+        }
+
+        /* ::selection pseudo-element */
+        p::selection {
+            background-color: yellow;
+            color: #333;
+        }
+
+        /* ::first-line pseudo-element */
+        p::first-line {
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+    </style>
+    <title>Pseudo-elements Example</title>
+</head>
+<body>
+<div class="container">
+    <p>
+        This is a sample paragraph. It demonstrates the use of pseudo-elements in CSS. The first letter of this paragraph is styled differently, and additional content is added using ::after. The selected text has a custom background color, and the first line is styled with different font weight and style.
+    </p>
+</div>
+</body>
+</html>

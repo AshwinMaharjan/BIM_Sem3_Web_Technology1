@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.styled-form {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+legend {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    background-color: yellow;
+    color: blue;
+    border: 1px solid #ddd;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+    height: 30px; /* Increase the height when checked */
+}
+
+input:invalid,
+textarea:invalid {
+    border: 1px solid red;
+}
+
+input:valid,
+textarea:valid {
+    border: 1px solid green;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style type="text/css">
+    body{
+      font-family: Arial, sans-serif;
+            color: black;
+      margin: 0;
+      padding: 10px;
+    }
+    .box{
+      background-color: lightgray;
+      width: 300px;
+      height: 350px;
+    }
+    input[type="text"]:hover{
+    background-color: yellow;
+    border-color: #ffcc00;
+  }
+    input[type="text"]{
+      color: blue;
+      padding-left:10px ;
+  }
+  input:invalid{
+    border: 1px solid red;
+  }
+  input:valid::before{
+    border: 1px solid green;
+  }
+  input[type="checkbox"]:checked{
+      transform: scale(2);
+  }
+    
+
+   
+  </style>
+</head>
+<body>
+  
+    <form action="#" method="post">
+      <fieldset class="box">
+           <label>Name:</label>
+           <input type="text"><br> <br>
+
+           <label for="Age">Age:</label>
+           <input type="number"><br> <br>
+
+           <label for="Phone">Phone:</label>
+           <input type="number"><br> <br>
+
+           <label for="Email">Email:</label>
+           <input type="email"><br> <br>
+
+           <label for="Gender">Gender:</label>
+           <input type="radio" name="Gender" placeholder="Male">Male
+           <input type="radio" name="Gender" placeholder="Male">Female<br> <br>
+
+           <label for="Birth">Birth Date:</label>
+           <input type="date" placeholder="DateOfBirth"><br> <br>
+
+           <label for="licence">Vehicle licence:</label><br>
+           <input type="checkbox" name="licence" >I have bike licence <br>
+           <input type="checkbox" name="licence" >I have car licence<br> <br>
+
+           <input type="submit" value="Submit"><br> <br>
+      </fieldset>
+    </form>
+ 
+</body>
+</html>

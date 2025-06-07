@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Data Validation</title>
+</head>
+<body>
+    Username: <input type="text" id="username" name="username" required> <br><br>
+    Password: <input type="password" id="password" name="password" required> <br><br>
+    Phone: <input type="text" id="phone" name="phone" required><br><br>
+    <button type="button" onclick="validateUserData()">Submit</button>
+<script>
+    function validateUserData() {
+        // Get user inputs
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        var phone = document.getElementById('phone').value;
+
+        // Check if any field is blank
+        if (!username || !password || !phone) {
+            alert("All fields must be filled out.");
+            return;
+        }
+
+        // Check if password is at least 6 characters long
+        if (password.length < 6) {
+            alert("Password must be at least 6 characters long.");
+            return;
+        }
+
+        // Check if phone number contains 7 digits
+        if (!/^\d{7}$/.test(phone)) {
+            alert("Phone number must contain exactly 7 digits.");
+            return;
+        }
+
+        // All validations passed
+        alert("Data is valid!");
+    }
+</script>
+
+
+</body>
+</html>
